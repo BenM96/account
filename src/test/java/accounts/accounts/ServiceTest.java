@@ -8,11 +8,11 @@ import java.util.Map;
 import org.junit.*;
 
 public class ServiceTest {
-	
+	static Map<Integer, Account> map= new HashMap<Integer, Account>();	 	
 	
 	@BeforeClass
 	public static void setup() {		
-		Map<Integer, Account> map= new HashMap<Integer, Account>();	    
+		   
 	    Account account = new Account("john", "smith",1);
 	    map.put(account.getAccountNumber(), account);
 	    account = new Account("dave", "smith",2);
@@ -27,8 +27,9 @@ public class ServiceTest {
 	@Test
 	public void test1() {
 		Service service=new Service();
-		service.findName("john");
-		assertEquals(2,service.findName("john"));
+		service.findName("john",map);
+		assertEquals(2,service.findName("john",map));
+		assertEquals(1,service.findName("dave", map));
 	}
 	
 
