@@ -7,7 +7,8 @@ public class ServiceTest {
 	@Test
 	public void test1() {
 		Service service=new Service();
-		service.name("john");
+		service.findName("john");
+		assert.equals(0,service.findName("john"));
 	}
 	
 

@@ -3,7 +3,7 @@ package accounts.accounts;
 
 public class Service {
 	
-	public void name(){
+	public void findName(String name){
 		
 	}
 	
