@@ -7,6 +7,7 @@ public class ServiceTest {
 	@Test
 	public void test1() {
 		Service service=new Service();
+		service.name("john");
 	}
 	
 
