@@ -59,11 +59,6 @@ public class ServiceTest {
 	    assertEquals("hello", outContent.toString());
 	}
 	
-	
-	
-	
-	
-	
 	@Test
 	public void test1() {		
 		
@@ -75,14 +70,12 @@ public class ServiceTest {
 		assertEquals(0,service.findName("", map));
 		
 	}
-	
-	
-	
+		
 	@Test
 	public void test2() {
 		Service service=new Service();
 		service.findName("john",map);
-		assertEquals(2,outContent.toString());
+		assertEquals("2",outContent.toString());
 	}
 	
 
