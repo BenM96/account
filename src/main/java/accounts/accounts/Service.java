@@ -13,7 +13,7 @@ public class Service {
 			
 		}
 		
-		System.out.print(count);
+		
 		return count;
 		
 	}
