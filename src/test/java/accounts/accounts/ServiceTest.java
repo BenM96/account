@@ -13,9 +13,7 @@ public class ServiceTest {
 	static Map<Integer, Account> map= new HashMap<Integer, Account>();	 	
 	
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	private final PrintStream originalOut = System.out;
-	private final PrintStream originalErr = System.err;	
 	
 	
 	
@@ -42,13 +40,11 @@ public class ServiceTest {
 	@Before
 	public void setUpStreams() {
 	    System.setOut(new PrintStream(outContent));
-	    System.setErr(new PrintStream(errContent));
 	}
 
 	@After
 	public void restoreStreams() {
 	    System.setOut(originalOut);
-	    System.setErr(originalErr);
 	}
 	
 	
@@ -59,10 +55,7 @@ public class ServiceTest {
 	    assertEquals("hello", outContent.toString());
 	}
 	
-	
-	
-	
-	
+		
 	
 	@Test
 	public void test1() {		
@@ -82,7 +75,7 @@ public class ServiceTest {
 	public void test2() {
 		Service service=new Service();
 		service.findName("john",map);
-		assertEquals(2,outContent.toString());
+		assertEquals("2",outContent.toString());
 	}
 	
 
